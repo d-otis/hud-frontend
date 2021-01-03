@@ -1,8 +1,5 @@
 const INITIAL_STATE = [
-  {
-    name: "Lily",
-    latin_name: "Lily-bear"
-  }
+  // isLoading: true
 ]
 
 const plantsReducer = ( state = INITIAL_STATE, action ) => {
