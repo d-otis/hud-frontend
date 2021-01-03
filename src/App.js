@@ -1,3 +1,7 @@
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { fetchPlants } from './actions/plants.actions'
+
 import logo from './logo.svg';
 import './App.css';
 
