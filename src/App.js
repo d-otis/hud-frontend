@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Route exact path="/plants" render={renderProps => <PlantsContainer {...renderProps} />} />
+        <Route path="/plants" render={renderProps => <PlantsContainer {...renderProps} />} />
       </Router>
     );
   }
