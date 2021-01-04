@@ -9,7 +9,28 @@ const Plant = ({ match, plants }) => {
 
   const renderPlant = () => {
     return (
-      <Header>{plant.name}</Header>
+      <PlantWrapper>
+        <Header>{plant.name}</Header>
+        <PlantSection><strong>Latin Name:</strong> {plant.latinName}</PlantSection>
+        <PlantSection><strong>Description:</strong> {plant.description}</PlantSection>
+        <PlantSection><strong>Watering:</strong> {plant.watering}</PlantSection>
+        <PlantSection><strong>Light:</strong> {plant.light}</PlantSection>
+        <PlantSection><strong>Soil:</strong> {plant.soil}</PlantSection>
+        <PlantSection><strong>Pruning:</strong> {plant.pruning}</PlantSection>
+        
+        {plant.pestAndDisease ? 
+          <PlantSection><strong>Pest & Disease:</strong> {plant.pestAndDisease}</PlantSection>
+        :
+          null
+        }
+
+        {plant.tempLow && plant.tempHi ? 
+          <PlantSection><strong>Temperature Spectrum:</strong> {plant.tempLow}&deg; - {plant.tempHi}&deg;</PlantSection>
+        :
+          null
+        }
+        
+      </PlantWrapper>
     )
   }
 
