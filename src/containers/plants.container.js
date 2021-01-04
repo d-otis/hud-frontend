@@ -13,5 +13,10 @@ const PlantsContainer = ({ plants }) => {
   )
 }
 
+const mapStateToProps = state => {
+  return {
+    plants: state.plants
+  }
+}
 
-export default PlantsContainer
+export default connect(mapStateToProps)(PlantsContainer)
