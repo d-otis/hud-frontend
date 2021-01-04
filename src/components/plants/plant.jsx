@@ -1,8 +1,21 @@
 import React from 'react'
+import { Header } from '../header/header.styles'
 
-const Plant = ({ match }) => {
+const Plant = ({ match, plants }) => {
+
+  const plantId = match.params.plantId
+  const plant = plants.find(plant => plant.id === plantId)
+
+  const renderPlant = () => {
+    return (
+      <Header>{plant.name}</Header>
+    )
+  }
+
   return(
-    <h4>plant instance</h4>
+    <>
+    {plant && renderPlant()}
+    </>
   )
 }
 
