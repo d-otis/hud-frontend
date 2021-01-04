@@ -1,4 +1,8 @@
-import react from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
+
+
+const PlantsContainer = ({ plants }) => {
 
 
 const PlantsContainer = () => {
