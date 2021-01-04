@@ -8,29 +8,20 @@ const Plant = ({ match, plants }) => {
   const plantId = match.params.plantId
   const plant = plants.find(plant => plant.id === plantId)
 
+  const renderSections = () => {
+    // eslint-disable-next-line
+    return Object.keys(plant).map(key => {
+      if (key !== 'id' && key !== 'roomId' && key !== 'name') {
+        return <PlantSection key={Math.floor(Math.random() * 100)}><strong>{niceNames[key] ? niceNames[key] : capitalize(key)}: </strong>{plant[key]}</PlantSection>
+      }
+    })
+  }
+
   const renderPlant = () => {
     return (
       <PlantWrapper>
         <Header>{plant.name}</Header>
-        <PlantSection><strong>Latin Name:</strong> {plant.latinName}</PlantSection>
-        <PlantSection><strong>Description:</strong> {plant.description}</PlantSection>
-        <PlantSection><strong>Watering:</strong> {plant.watering}</PlantSection>
-        <PlantSection><strong>Light:</strong> {plant.light}</PlantSection>
-        <PlantSection><strong>Soil:</strong> {plant.soil}</PlantSection>
-        <PlantSection><strong>Pruning:</strong> {plant.pruning}</PlantSection>
-        
-        {plant.pestAndDisease ? 
-          <PlantSection><strong>Pest & Disease:</strong> {plant.pestAndDisease}</PlantSection>
-        :
-          null
-        }
-
-        {plant.tempLow && plant.tempHi ? 
-          <PlantSection><strong>Temperature Spectrum:</strong> {plant.tempLow}&deg; - {plant.tempHi}&deg;</PlantSection>
-        :
-          null
-        }
-        
+        {renderSections()} 
       </PlantWrapper>
     )
   }
