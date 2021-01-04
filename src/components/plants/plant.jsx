@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header } from '../header/header.styles'
+import { PlantSection, PlantWrapper } from './plant.styles'
 
 const Plant = ({ match, plants }) => {
 
