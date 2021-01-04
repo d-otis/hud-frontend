@@ -5,9 +5,7 @@ import { Header } from '../components/header/header.styles'
 import PlantsList from '../components/plants/plantsList'
 import Plant from '../components/plants/plant'
 
-
-const PlantsContainer = ({ plants }) => {
-
+const PlantsContainer = ({ plants, match }) => {
 
   return(
     <div>
