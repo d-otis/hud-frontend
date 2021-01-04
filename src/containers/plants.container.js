@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Header } from '../components/header/header.styles'
 
 
 const PlantsContainer = ({ plants }) => {
@@ -7,7 +8,7 @@ const PlantsContainer = ({ plants }) => {
 
   return(
     <div>
-      <h1>Plants Container!</h1>
+      <Header>Plants Container</Header>
       {plants.map(plant => <li>{plant.name}</li>)}
     </div>
   )
