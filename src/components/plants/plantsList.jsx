@@ -6,7 +6,7 @@ const PlantsList = ({ plants, match }) => {
   return(
     <div>
       <Header>Plants List</Header>
-      {plants.map(plant => <li><Link to={`${match.path}${plant.id}`}>{plant.name}</Link></li>)}
+      {plants.map(plant => <li key={plant.id}><Link to={`${match.path}${plant.id}`}>{plant.name}</Link></li>)}
     </div>
   )
 }
