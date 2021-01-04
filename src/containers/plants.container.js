@@ -6,7 +6,10 @@ const PlantsContainer = ({ plants }) => {
 
 
   return(
-    <h1>Plants Container!</h1>
+    <div>
+      <h1>Plants Container!</h1>
+      {plants.map(plant => <li>{plant.name}</li>)}
+    </div>
   )
 }
 
