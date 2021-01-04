@@ -2,6 +2,7 @@ import React from 'react'
 import { Header } from '../header/header.styles'
 import { PlantSection, PlantWrapper } from './plant.styles'
 import { niceNames, capitalize } from '../../util'
+import { v4 as uuid } from 'uuid'
 
 const Plant = ({ match, plants, history }) => {
 
@@ -12,7 +13,7 @@ const Plant = ({ match, plants, history }) => {
     // eslint-disable-next-line
     return Object.keys(plant).map(key => {
       if (key !== 'id' && key !== 'roomId' && key !== 'name') {
-        return <PlantSection key={Math.floor(Math.random() * 100)}><strong>{niceNames[key] ? niceNames[key] : capitalize(key)}: </strong>{plant[key]}</PlantSection>
+        return <PlantSection key={uuid()}><strong>{niceNames[key] ? niceNames[key] : capitalize(key)}: </strong>{plant[key]}</PlantSection>
       }
     })
   }
