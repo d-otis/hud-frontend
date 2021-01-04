@@ -3,7 +3,7 @@ import { Header } from '../header/header.styles'
 import { PlantSection, PlantWrapper } from './plant.styles'
 import { niceNames, capitalize } from '../../util'
 
-const Plant = ({ match, plants }) => {
+const Plant = ({ match, plants, history }) => {
 
   const plantId = match.params.plantId
   const plant = plants.find(plant => plant.id === plantId)
@@ -28,6 +28,7 @@ const Plant = ({ match, plants }) => {
 
   return(
     <>
+    <button onClick={() => history.goBack()} >back</button>
     {plant && renderPlant()}
     </>
   )
