@@ -1,19 +1,19 @@
-import React from 'react'
-import { Header } from '../header/header.styles'
-import { PlantWrapper } from './plant.styles'
+import React, { useState } from 'react'
+import { PlantHeader } from './plant.styles'
 import PlantSections from './plantSections'
 
 const Plant = ({ match, plants, history }) => {
 
-  const plantId = match.params.plantId
-  const plant = plants.find(plant => plant.id === plantId)
+  const [visibility, setVisibility] = useState(false)
+
+  const handleClick = () => setVisibility(!visibility)
 
   const renderPlant = () => {
     return (
-      <PlantWrapper>
-        <Header>{plant.name}</Header>
-        <PlantSections plant={plant} />
-      </PlantWrapper>
+      <>
+        <PlantHeader onClick={handleClick}>{plant.name}</PlantHeader>
+        {visibility && <PlantSections plant={plant} />}
+      </>
     )
   }
 
