@@ -1,12 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Header } from '../header/header.styles'
+import Plant from './plant'
 
 const PlantsList = ({ plants, match }) => {
   return(
     <div>
-      <Header>Plants List</Header>
-      {plants.map(plant => <li key={plant.id}><Link to={`${match.path}${plant.id}`}>{plant.name}</Link></li>)}
+      <Header>Plants List Accordion</Header>
+      {plants.map(plant => {
+        return <Plant plant={plant} key={plant.id} />
+      })}
     </div>
   )
 }
