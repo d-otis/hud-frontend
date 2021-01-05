@@ -5,6 +5,7 @@ import { niceNames, capitalize } from '../../util'
 
 const PlantSections = ({ plant }) => {
   return(
+    // eslint-disable-next-line
     Object.keys(plant).map(key => {
       if (key !== 'id' && key !== 'roomId' && key !== 'name' && plant[key]) {
         // TODO: create formatData() util function to handle rendering of temperatures (degrees) and Season names instead of ids
