@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { PlantHeader } from './plant.styles'
+import { PlantHeader, PlantWrapper } from './plant.styles'
 import PlantSections from './plantSections'
 
 const Plant = ({ plant }) => {
@@ -10,10 +10,10 @@ const Plant = ({ plant }) => {
 
   const renderPlant = () => {
     return (
-      <>
+      <PlantWrapper>
         <PlantHeader onClick={handleClick}>{plant.name}</PlantHeader>
         {visibility && <PlantSections plant={plant} />}
-      </>
+      </PlantWrapper>
     )
   }
 
