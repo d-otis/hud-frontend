@@ -1,15 +1,18 @@
 import styled from 'styled-components'
 
 export const PlantWrapper = styled.div`
-  border: 2px solid purple;
+  margin: 2% 10%;
+  background-color: #e9e9e9;
 `;
 
 export const PlantSection = styled.p`
-  padding-left: 35px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 15px;
 `
 
 export const PlantHeader = styled.button`
-  margin-top: 5px;
+  /* margin-top: 5px; */
   width: 100%;
   padding: 20px;
   font-size: 1.5em;
@@ -18,5 +21,4 @@ export const PlantHeader = styled.button`
   cursor: pointer;
   font-weight: 800;
   background-color: lightgreen;
-  transition: 0.4s;
 `
