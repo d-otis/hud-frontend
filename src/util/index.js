@@ -2,7 +2,8 @@ export const niceNames = {
   tempLow: "Temperature Low",
   tempHi: "Temperature High",
   latinName: "Latin Name",
-  pestAndDisease: "Pest & Disease"
+  pestAndDisease: "Pest & Disease",
+  seasonIds: "Seasons"
 }
 
 export const capitalize = word => {
