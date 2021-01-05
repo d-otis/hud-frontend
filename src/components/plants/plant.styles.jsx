@@ -5,6 +5,18 @@ export const PlantWrapper = styled.div`
 `;
 
 export const PlantSection = styled.p`
-  border: 3px solid pink;
   padding-left: 35px;
+`
+
+export const PlantHeader = styled.button`
+  margin-top: 5px;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.5em;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  background-color: lightgreen;
+  transition: 0.4s;
 `
