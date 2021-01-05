@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { PlantHeader } from './plant.styles'
 import PlantSections from './plantSections'
 
-const Plant = ({ match, plants, history }) => {
+const Plant = ({ plant }) => {
 
   const [visibility, setVisibility] = useState(false)
 
