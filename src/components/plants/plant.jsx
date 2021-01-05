@@ -19,7 +19,6 @@ const Plant = ({ plant }) => {
 
   return(
     <>
-    <button onClick={() => history.goBack()} >back</button>
     {plant && renderPlant()}
     </>
   )
