@@ -9,6 +9,7 @@ export const PlantSection = styled.p`
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 15px;
+  /* max-height: 0; */
 `
 
 export const PlantHeader = styled.button`
