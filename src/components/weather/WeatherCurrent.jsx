@@ -1,4 +1,5 @@
 import React from 'react';
+import { WeatherCurrentWrapper } from './weather.styles'
 
 const WeatherCurrent = ({ current }) => {
 
@@ -9,11 +10,13 @@ const WeatherCurrent = ({ current }) => {
   const { temp } = current
 
   return (
-    <ul> Le Weather {renderIcons()}
-      <li>Temperature: {temp} &deg; </li>
-      <li>High Temp: xx</li>
-      <li>Low Temp: xx</li>
-    </ul>
+    <WeatherCurrentWrapper>
+      <ul> Le Weather {renderIcons()}
+        <li>Temperature: {temp} &deg; </li>
+        <li>High Temp: xx</li>
+        <li>Low Temp: xx</li>
+      </ul>
+    </WeatherCurrentWrapper>
   )
 }
 
