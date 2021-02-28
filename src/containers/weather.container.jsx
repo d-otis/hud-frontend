@@ -1,9 +1,17 @@
 import React from 'react';
+import Weather from '../components/weather/Weather'
+import { connect } from 'react-redux'
 
-const WeatherContainer = () => {
+const WeatherContainer = ({ weather }) => {
   return(
-    <h1>Weather Container</h1>
+    <Weather weather={weather} />
   )
 }
 
-export default WeatherContainer
+const mapStateToProps = state => {
+  return {
+    weather: state.weather
+  }
+}
+
+export default connect(mapStateToProps)(WeatherContainer)
