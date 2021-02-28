@@ -6,7 +6,7 @@ const Plant = ({ plant }) => {
 
   const [visibility, setVisibility] = useState(false)
 
-  const handleClick = () => setVisibility(!visibility)
+  const handleClick = () => setVisibility(visibility => !visibility)
 
   const renderPlant = () => {
     return (
