@@ -1,8 +1,19 @@
 import React from 'react'
 
 const Weather = ({ weather }) => {
+
+  const { current } = weather
+
+  const { temp } = current
+
   return(
-    <h1>the Weather component</h1>
+    <>
+    <ul> Le Weather
+      <li>Temperature: {temp} </li>
+      <li>High Temp: xx</li>
+      <li>Low Temp: xx</li>
+    </ul>
+    </>
   )
 }
 
