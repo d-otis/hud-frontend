@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { fetchPlants } from './actions/plants.actions'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import PlantsContainer from './containers/plants.container';
+import Navigation from "./components/navigation/Navigation"
 
 class App extends Component {
 
@@ -13,6 +14,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Navigation />
         <Route path="/plants" render={renderProps => <PlantsContainer {...renderProps} />} />
       </Router>
     );
