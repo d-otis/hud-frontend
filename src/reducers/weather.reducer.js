@@ -1,4 +1,4 @@
-const INITIAL_STATE = {}
+const INITIAL_STATE = { loading: true }
 
 const weatherReducer = ( state = INITIAL_STATE, action ) => {
   switch(action.type) {
@@ -7,7 +7,8 @@ const weatherReducer = ( state = INITIAL_STATE, action ) => {
       return state
     case "SET_WEATHER":
       return {
-        ...action.payload
+        ...action.payload,
+        loading: false
       }
     default:
       return state
