@@ -6,8 +6,9 @@ const weatherReducer = ( state = INITIAL_STATE, action ) => {
       console.log('loading weather')
       return state
     case "SET_WEATHER":
-      debugger
-      return state
+      return {
+        ...action.payload
+      }
     default:
       return state
   }
