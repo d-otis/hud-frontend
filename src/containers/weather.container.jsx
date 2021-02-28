@@ -3,8 +3,11 @@ import Weather from '../components/weather/Weather'
 import { connect } from 'react-redux'
 
 const WeatherContainer = ({ weather }) => {
+
+  const { loading } = weather
+
   return(
-    <Weather weather={weather} />
+    loading || <Weather weather={weather} />
   )
 }
 
