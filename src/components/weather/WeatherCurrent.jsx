@@ -11,7 +11,7 @@ const WeatherCurrent = ({ current }) => {
 
   return (
     <WeatherCurrentWrapper>
-      <ul> Le Weather {renderIcons()}
+      <ul> Current Weather {renderIcons()}
         <li>Temperature: {temp} &deg; </li>
         <li>High Temp: xx</li>
         <li>Low Temp: xx</li>
