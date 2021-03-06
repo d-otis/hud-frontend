@@ -8,7 +8,7 @@ import Plant from '../components/plants/plant'
 const PlantsContainer = ({ plants, match }) => {
 
   return(
-    <div>
+    <div className="mt-5">
       <Route path={`${match.path}/:plantId`} render={routerProps => <Plant {...routerProps} plants={plants} />} />
       <Route exact path={match.url} render={routerProps => <PlantsList {...routerProps} plants={plants} />} />
     </div>
