@@ -4,7 +4,7 @@ import { WeatherCurrentWrapper } from './weather.styles'
 const WeatherCurrent = ({ current }) => {
 
   const renderIcons = () => {
-    return current.weather.map(el => <img src={`http://openweathermap.org/img/wn/${el.icon}@2x.png`} alt=""/>)
+    return current.weather.map(el => <img src={`http://openweathermap.org/img/wn/${el.icon}@2x.png`} alt="" key={el.icon} />)
   }
 
   const { temp } = current
