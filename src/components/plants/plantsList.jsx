@@ -5,7 +5,6 @@ import Plant from './plant'
 const PlantsList = ({ plants, match }) => {
   return(
     <div>
-      <Header>Plants List Accordion</Header>
       {plants.map(plant => {
         return <Plant plant={plant} key={plant.id} />
       })}

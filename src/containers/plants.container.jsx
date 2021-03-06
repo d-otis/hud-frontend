@@ -9,7 +9,6 @@ const PlantsContainer = ({ plants, match }) => {
 
   return(
     <div>
-      <Header>Plants Container</Header>
       <Route path={`${match.path}/:plantId`} render={routerProps => <Plant {...routerProps} plants={plants} />} />
       <Route exact path={match.url} render={routerProps => <PlantsList {...routerProps} plants={plants} />} />
     </div>
