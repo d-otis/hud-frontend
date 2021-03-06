@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Day = ({ day }) => {
+const Day = ({ dayData }) => {
 
-  const { dt } = day
+  const { dt } = dayData
+
+  const day = dayMap[new Date(dt * 1000).getDay()]
 
   return(
     <h2>A Day: { dt }</h2>
