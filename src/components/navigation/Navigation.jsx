@@ -8,7 +8,7 @@ const Navigation = () => {
 
   return (
     <>
-      <Navbar bg="light" expand="md" className="shadow-sm">
+      <Navbar bg="light" expand="md" className="shadow-sm" fixed="top">
         <Navbar.Brand href="">HUD</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
