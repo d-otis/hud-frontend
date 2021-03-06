@@ -74,3 +74,13 @@ export const codes = {
   803:	{main: "Clouds", description:	"broken clouds: 51-84%", icon: "04"},
   804:	{main: "Clouds", description:	"overcast clouds: 85-100%", icon: "04"},
 }
+
+export const dayMap = {
+  0: "Sunday",
+  1: "Monday",
+  2: "Tuesday",
+  3: "Wednesday",
+  4: "Thursday",
+  5: "Friday",
+  6: "Saturday"
+}
