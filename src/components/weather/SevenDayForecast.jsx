@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import CardGroup from 'react-bootstrap/CardGroup'
 import Day from './Day'
 
 const SevenDayForecast = ({ daily }) => {
@@ -10,7 +11,9 @@ const SevenDayForecast = ({ daily }) => {
   return(
     <Container>
       <Row>
-        { generateDays() }
+        <CardGroup>
+          { generateDays() }
+        </CardGroup>
       </Row>
     </Container>
   )
