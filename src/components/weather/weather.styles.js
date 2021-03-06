@@ -4,3 +4,7 @@ export const WeatherCurrentWrapper = styled.div`
   border: 1px solid pink;
   display: flex;
 `
+
+export const DayWrapper = styled.div`
+  background: lightgray;
+`
