@@ -2,17 +2,18 @@ import React from 'react';
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import { dayMap } from '../../util'
+import Icon from './Icon'
 
 const Day = ({ dayData }) => {
 
-  const { dt } = dayData
+  const { dt, weather } = dayData
 
   const day = dayMap[new Date(dt * 1000).getDay()].slice(0, 3).split("").map(char => char.toUpperCase()).join("")
 
   return(
     <Col md className="px-0">
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        {weather.map(el => <Icon weatherData={el} card />)}
         <Card.Body>
           <Card.Title>{ day }</Card.Title>
           <Card.Text>
