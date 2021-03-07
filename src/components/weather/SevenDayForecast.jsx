@@ -9,7 +9,7 @@ const SevenDayForecast = ({ daily }) => {
   const generateDays = () => daily.map(data => <Day dayData={data} key={data.dt} />)
 
   return(
-    <Container>
+    <Container fluid>
       <Row>
         <CardGroup>
           { generateDays() }
