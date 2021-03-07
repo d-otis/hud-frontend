@@ -6,7 +6,7 @@ import Icon from './Icon'
 
 const Day = ({ dayData }) => {
 
-  const { dt, weather } = dayData
+  const { dt, weather, temp, wind_speed, pop } = dayData
 
   const day = dayMap[new Date(dt * 1000).getDay()].slice(0, 3).split("").map(char => char.toUpperCase()).join("")
 
@@ -19,8 +19,13 @@ const Day = ({ dayData }) => {
         <Card.Body>
           <Card.Title>{ day }</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
+            High: {temp.max}&deg;
+            <br/>
+            Low: {temp.min}&deg;
+            <br/>
+            Wind: {wind_speed} mph
+            <br/>
+            Precip: {pop}%
           </Card.Text>
         </Card.Body>
         <Card.Footer>
