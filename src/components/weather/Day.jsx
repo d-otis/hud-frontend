@@ -10,10 +10,12 @@ const Day = ({ dayData }) => {
 
   const day = dayMap[new Date(dt * 1000).getDay()].slice(0, 3).split("").map(char => char.toUpperCase()).join("")
 
+  const generateIcons = () => weather.map(el => <Icon weatherData={el} card />)
+
   return(
     <Col md className="px-0">
       <Card>
-        {weather.map(el => <Icon weatherData={el} card />)}
+        {generateIcons()}
         <Card.Body>
           <Card.Title>{ day }</Card.Title>
           <Card.Text>
