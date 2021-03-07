@@ -14,12 +14,22 @@ const WeatherCurrent = ({ current }) => {
     return current.weather.map(data => data.main).join(" & ")
   }
 
+  const renderSunriseSunset = () => {
+    let rise = new Date(sunrise * 1000).toLocaleTimeString()
+    let set = new Date(sunset * 1000).toLocaleTimeString()
+    return(
+      <>
+        <li>Sunrise: {rise}</li>
+        <li>Sunset: {set}</li>
+      </>
+    )
+  }
+
   return (
     <WeatherCurrentWrapper>
       <ul> Current: {renderShortDescription()} {renderIcons()}
         <li>Temperature: {temp} &deg; </li>
-        <li>High Temp: xx</li>
-        <li>Low Temp: xx</li>
+        {renderSunriseSunset()}
       </ul>
     </WeatherCurrentWrapper>
   )
