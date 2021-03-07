@@ -6,7 +6,7 @@ import Day from './Day'
 
 const SevenDayForecast = ({ daily }) => {
 
-  const generateDays = () => daily.map(day => <Day day={day} key={day.dt} />)
+  const generateDays = () => daily.map(data => <Day dayData={data} key={data.dt} />)
 
   return(
     <Container>
