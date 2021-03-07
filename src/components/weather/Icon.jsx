@@ -10,7 +10,7 @@ const Icon = ({ weatherData, card }) => {
     <>
       {card 
         ?
-       <Card.Img variant="top" src={`http://openweathermap.org/img/wn/${icon}@2x.png`} />
+       <Card.Img variant="top" src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt={description} />
        :
        <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt={description} key={icon} />
       }
