@@ -4,6 +4,8 @@ import Icon from './Icon'
 
 const WeatherCurrent = ({ current }) => {
 
+  const { temp } = current
+
   const renderIcons = () => {
     return current.weather.map(data => <Icon weatherData={data} />)
   }
@@ -11,8 +13,6 @@ const WeatherCurrent = ({ current }) => {
   const renderShortDescription = () => {
     return current.weather.map(data => data.main).join(" & ")
   }
-
-  const { temp } = current
 
   return (
     <WeatherCurrentWrapper>
