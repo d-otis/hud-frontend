@@ -1,10 +1,11 @@
 import React from 'react';
 import { WeatherCurrentWrapper } from './weather.styles'
+import Icon from './Icon'
 
 const WeatherCurrent = ({ current }) => {
 
   const renderIcons = () => {
-    return current.weather.map(el => <img src={`http://openweathermap.org/img/wn/${el.icon}@2x.png`} alt="" key={el.icon} />)
+    return current.weather.map(data => <Icon weatherData={data} />)
   }
 
   const { temp } = current
