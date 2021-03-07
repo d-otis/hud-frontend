@@ -4,7 +4,7 @@ import Icon from './Icon'
 
 const WeatherCurrent = ({ current }) => {
 
-  const { temp } = current
+  const { temp, sunrise, sunset } = current
 
   const renderIcons = () => {
     return current.weather.map(data => <Icon weatherData={data} />)
