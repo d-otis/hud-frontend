@@ -10,6 +10,10 @@ export const capitalize = word => {
   return word.charAt(0).toUpperCase() + word.substr(1)
 }
 
+export const uppercaseAbbreviate = day => {
+  return day.slice(0, 3).split("").map(char => char.toUpperCase()).join("")
+}
+
 export const codes = {
   // Group Thunderstorm
   200:	{main: "Thunderstorm", description:	"thunderstorm with light rain", icon: "11"},

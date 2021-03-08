@@ -1,14 +1,14 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import { dayMap } from '../../util'
+import { dayMap, uppercaseAbbreviate } from '../../util'
 import Icon from './Icon'
 
 const Day = ({ dayData }) => {
 
   const { dt, weather, temp, wind_speed, pop } = dayData
 
-  const day = dayMap[new Date(dt * 1000).getDay()].slice(0, 3).split("").map(char => char.toUpperCase()).join("")
+  const day = uppercaseAbbreviate(dayMap[new Date(dt * 1000).getDay()])
 
   const generateIcons = () => weather.map(el => <Icon weatherData={el} card />)
 
@@ -28,9 +28,6 @@ const Day = ({ dayData }) => {
             Precip: {pop}%
           </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
       </Card>
     </Col>
   )
