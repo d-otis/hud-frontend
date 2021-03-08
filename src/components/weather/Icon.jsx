@@ -2,7 +2,6 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 
 const Icon = ({ weatherData, card }) => {
-  // conditional for card vs image tag
 
   const { icon, description } = weatherData
 
