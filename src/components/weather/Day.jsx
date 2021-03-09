@@ -10,7 +10,7 @@ const Day = ({ dayData }) => {
   
   const processedDate = new Date(dt * 1000)
 
-  const day = uppercaseAbbreviate(dayMap[new Date(dt * 1000).getDay()])
+  const day = uppercaseAbbreviate(dayMap[processedDate.getDay()], 2)
 
   const generateIcons = () => weather.map(el => <Icon weatherData={el} card />)
 
