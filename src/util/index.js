@@ -10,8 +10,8 @@ export const capitalize = word => {
   return word.charAt(0).toUpperCase() + word.substr(1)
 }
 
-export const uppercaseAbbreviate = day => {
-  return day.slice(0, 3).split("").map(char => char.toUpperCase()).join("")
+export const uppercaseAbbreviate = (day, numChars) => {
+  return day.slice(0, numChars).split("").map(char => char.toUpperCase()).join("")
 }
 
 export const codes = {
