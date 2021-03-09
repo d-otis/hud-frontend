@@ -15,23 +15,24 @@ const Day = ({ dayData }) => {
   const generateIcons = () => weather.map(el => <Icon weatherData={el} card />)
 
   return(
-    <Col md className="px-0">
-      <Card>
-        {generateIcons()}
-        <Card.Body>
-          <Card.Title>{ day }</Card.Title>
-          <Card.Text>
-            High: {temp.max}&deg;
-            <br/>
-            Low: {temp.min}&deg;
-            <br/>
-            Wind: {wind_speed} mph
-            <br/>
-            Precip: {pop}%
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </Col>
+    <Card>
+      {generateIcons()}
+      <Card.Body>
+        <Card.Title>{ day }</Card.Title>
+        <Card.Text>
+          High: {temp.max}&deg;
+          <br/>
+          Low: {temp.min}&deg;
+          <br/>
+          Wind: {wind_speed} mph
+          <br/>
+          Precip: {pop}%
+        </Card.Text>
+      </Card.Body>
+      <Card.Footer>
+        <small className="text-muted">Last updated 3 mins ago</small>
+      </Card.Footer>
+    </Card>
   )
 }
 
