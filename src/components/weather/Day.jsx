@@ -7,6 +7,8 @@ import Icon from './Icon'
 const Day = ({ dayData }) => {
 
   const { dt, weather, temp, wind_speed, pop } = dayData
+  
+  const processedDate = new Date(dt * 1000)
 
   const day = uppercaseAbbreviate(dayMap[new Date(dt * 1000).getDay()])
 
